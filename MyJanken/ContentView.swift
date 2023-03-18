@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var answerNumber = 0
     var body: some View {
-        Image("gu")
+        
+        VStack {
+        // グーの画像を指定
+            Image("gu")
+        // リサイズを指定
+                .resizable()
+        // 画面に収まるように、アスペクト比(縦横比)を維持する指定
+                .scaledToFit()
+        // じゃんけんの種類を指定
+            Text ("グー")
+            
+            Button {
+                print("ボタンがタップされたよ！")
+            } label: {
+                Text("じゃんけんをする")
+            }
+
+        }
+        
     }
 }
 
